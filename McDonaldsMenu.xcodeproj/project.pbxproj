@@ -14,6 +14,8 @@
 		F24AD7252888C0C0000F65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7242888C0C0000F65D2 /* Assets.xcassets */; };
 		F24AD7282888C0C0000F65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */; };
 		F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */; };
+		F24AD74D2888C1D6000F65D2 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F24AD74C2888C1D6000F65D2 /* SnapshotTesting */; };
+		F24AD7502888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 		F24AD7292888C0C0000F65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuTests.swift; sourceTree = "<group>"; };
+		F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+SnapshotTestingHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24AD74D2888C1D6000F65D2 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +96,18 @@
 		F24AD7312888C0C1000F65D2 /* McDonaldsMenuTests */ = {
 			isa = PBXGroup;
 			children = (
+				F24AD74E2888C1F1000F65D2 /* Helpers */,
 				F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */,
 			);
 			path = McDonaldsMenuTests;
+			sourceTree = "<group>";
+		};
+		F24AD74E2888C1F1000F65D2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +126,9 @@
 			dependencies = (
 			);
 			name = McDonaldsMenu;
+			packageProductDependencies = (
+				F24AD74C2888C1D6000F65D2 /* SnapshotTesting */,
+			);
 			productName = McDonaldsMenu;
 			productReference = F24AD7182888C0BD000F65D2 /* McDonaldsMenu.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +179,9 @@
 				Base,
 			);
 			mainGroup = F24AD70F2888C0BD000F65D2;
+			packageReferences = (
+				F24AD74B2888C1D6000F65D2 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = F24AD7192888C0BD000F65D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */,
+				F24AD7502888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +298,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -338,6 +359,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -483,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F24AD74B2888C1D6000F65D2 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F24AD74C2888C1D6000F65D2 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F24AD74B2888C1D6000F65D2 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F24AD7102888C0BD000F65D2 /* Project object */;
 }
