@@ -9,5 +9,9 @@ import XCTest
 @testable import McDonaldsMenu
 
 class McDonaldsMenuTests: XCTestCase {
-    
+    func test_emptyScreen() {
+        let sut = MainMenuViewController()
+        
+        assert(sut, device: .iPhoneX)
+    }
 }

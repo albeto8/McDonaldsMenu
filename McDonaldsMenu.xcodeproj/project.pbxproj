@@ -16,6 +16,8 @@
 		F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */; };
 		F24AD74D2888C1D6000F65D2 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F24AD74C2888C1D6000F65D2 /* SnapshotTesting */; };
 		F24AD7502888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */; };
+		F27F7C3D2888C31000185602 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C3C2888C31000185602 /* MainMenuViewController.swift */; };
+		F27F7C402888C34C00185602 /* __Snapshots__ in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C3F2888C34C00185602 /* __Snapshots__ */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuTests.swift; sourceTree = "<group>"; };
 		F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+SnapshotTestingHelpers.swift"; sourceTree = "<group>"; };
+		F27F7C3C2888C31000185602 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		F27F7C3F2888C34C00185602 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F27F7C3E2888C31400185602 /* Controllers */,
 				F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */,
 				F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */,
 				F24AD71F2888C0BD000F65D2 /* ViewController.swift */,
@@ -96,6 +101,7 @@
 		F24AD7312888C0C1000F65D2 /* McDonaldsMenuTests */ = {
 			isa = PBXGroup;
 			children = (
+				F27F7C3F2888C34C00185602 /* __Snapshots__ */,
 				F24AD74E2888C1F1000F65D2 /* Helpers */,
 				F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */,
 			);
@@ -108,6 +114,14 @@
 				F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F27F7C3E2888C31400185602 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F27F7C3C2888C31000185602 /* MainMenuViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27F7C402888C34C00185602 /* __Snapshots__ in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27F7C3D2888C31000185602 /* MainMenuViewController.swift in Sources */,
 				F24AD7202888C0BD000F65D2 /* ViewController.swift in Sources */,
 				F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
