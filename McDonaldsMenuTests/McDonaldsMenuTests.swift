@@ -24,12 +24,12 @@ class McDonaldsMenuTests: XCTestCase {
         sut.display([beberageCategory])
         
         sut.loadViewIfNeeded()
-        
         record(sut, device: .iPhoneX)
     }
     
     private func makeMenuCategory(title: String) -> MenuCategory {
         let product = Product(name: "Coca-Cola")
-        return MenuCategory(title: title, products: [product])
+        let product2 = Product(name: "Sprite")
+        return MenuCategory(title: title, products: [product, product2])
     }
 }

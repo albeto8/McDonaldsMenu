@@ -59,6 +59,8 @@ extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        let category = menuCategories[indexPath.row]
+        cell.configure(with: category.products)
         
         return cell
     }
