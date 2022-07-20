@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */; };
+		F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */; };
+		F24AD7202888C0BD000F65D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD71F2888C0BD000F65D2 /* ViewController.swift */; };
+		F24AD7232888C0BD000F65D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7212888C0BD000F65D2 /* Main.storyboard */; };
+		F24AD7252888C0C0000F65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7242888C0C0000F65D2 /* Assets.xcassets */; };
+		F24AD7282888C0C0000F65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */; };
+		F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */; };
+		F24AD73D2888C0C1000F65D2 /* McDonaldsMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD73C2888C0C1000F65D2 /* McDonaldsMenuUITests.swift */; };
+		F24AD73F2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD73E2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F24AD72F2888C0C1000F65D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24AD7102888C0BD000F65D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F24AD7172888C0BD000F65D2;
+			remoteInfo = McDonaldsMenu;
+		};
+		F24AD7392888C0C1000F65D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24AD7102888C0BD000F65D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F24AD7172888C0BD000F65D2;
+			remoteInfo = McDonaldsMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F24AD7182888C0BD000F65D2 /* McDonaldsMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McDonaldsMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F24AD71F2888C0BD000F65D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F24AD7222888C0BD000F65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F24AD7242888C0C0000F65D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F24AD7272888C0C0000F65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F24AD7292888C0C0000F65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuTests.swift; sourceTree = "<group>"; };
+		F24AD7382888C0C1000F65D2 /* McDonaldsMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24AD73C2888C0C1000F65D2 /* McDonaldsMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuUITests.swift; sourceTree = "<group>"; };
+		F24AD73E2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F24AD7152888C0BD000F65D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24AD72B2888C0C1000F65D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24AD7352888C0C1000F65D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F24AD70F2888C0BD000F65D2 = {
+			isa = PBXGroup;
+			children = (
+				F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */,
+				F24AD7312888C0C1000F65D2 /* McDonaldsMenuTests */,
+				F24AD73B2888C0C1000F65D2 /* McDonaldsMenuUITests */,
+				F24AD7192888C0BD000F65D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F24AD7192888C0BD000F65D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F24AD7182888C0BD000F65D2 /* McDonaldsMenu.app */,
+				F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */,
+				F24AD7382888C0C1000F65D2 /* McDonaldsMenuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */,
+				F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */,
+				F24AD71F2888C0BD000F65D2 /* ViewController.swift */,
+				F24AD7212888C0BD000F65D2 /* Main.storyboard */,
+				F24AD7242888C0C0000F65D2 /* Assets.xcassets */,
+				F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */,
+				F24AD7292888C0C0000F65D2 /* Info.plist */,
+			);
+			path = McDonaldsMenu;
+			sourceTree = "<group>";
+		};
+		F24AD7312888C0C1000F65D2 /* McDonaldsMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */,
+			);
+			path = McDonaldsMenuTests;
+			sourceTree = "<group>";
+		};
+		F24AD73B2888C0C1000F65D2 /* McDonaldsMenuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F24AD73C2888C0C1000F65D2 /* McDonaldsMenuUITests.swift */,
+				F24AD73E2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift */,
+			);
+			path = McDonaldsMenuUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F24AD7172888C0BD000F65D2 /* McDonaldsMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24AD7422888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenu" */;
+			buildPhases = (
+				F24AD7142888C0BD000F65D2 /* Sources */,
+				F24AD7152888C0BD000F65D2 /* Frameworks */,
+				F24AD7162888C0BD000F65D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = McDonaldsMenu;
+			productName = McDonaldsMenu;
+			productReference = F24AD7182888C0BD000F65D2 /* McDonaldsMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F24AD72D2888C0C1000F65D2 /* McDonaldsMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24AD7452888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenuTests" */;
+			buildPhases = (
+				F24AD72A2888C0C1000F65D2 /* Sources */,
+				F24AD72B2888C0C1000F65D2 /* Frameworks */,
+				F24AD72C2888C0C1000F65D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F24AD7302888C0C1000F65D2 /* PBXTargetDependency */,
+			);
+			name = McDonaldsMenuTests;
+			productName = McDonaldsMenuTests;
+			productReference = F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F24AD7372888C0C1000F65D2 /* McDonaldsMenuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24AD7482888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenuUITests" */;
+			buildPhases = (
+				F24AD7342888C0C1000F65D2 /* Sources */,
+				F24AD7352888C0C1000F65D2 /* Frameworks */,
+				F24AD7362888C0C1000F65D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F24AD73A2888C0C1000F65D2 /* PBXTargetDependency */,
+			);
+			name = McDonaldsMenuUITests;
+			productName = McDonaldsMenuUITests;
+			productReference = F24AD7382888C0C1000F65D2 /* McDonaldsMenuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F24AD7102888C0BD000F65D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F24AD7172888C0BD000F65D2 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					F24AD72D2888C0C1000F65D2 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = F24AD7172888C0BD000F65D2;
+					};
+					F24AD7372888C0C1000F65D2 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = F24AD7172888C0BD000F65D2;
+					};
+				};
+			};
+			buildConfigurationList = F24AD7132888C0BD000F65D2 /* Build configuration list for PBXProject "McDonaldsMenu" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F24AD70F2888C0BD000F65D2;
+			productRefGroup = F24AD7192888C0BD000F65D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F24AD7172888C0BD000F65D2 /* McDonaldsMenu */,
+				F24AD72D2888C0C1000F65D2 /* McDonaldsMenuTests */,
+				F24AD7372888C0C1000F65D2 /* McDonaldsMenuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F24AD7162888C0BD000F65D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24AD7282888C0C0000F65D2 /* LaunchScreen.storyboard in Resources */,
+				F24AD7252888C0C0000F65D2 /* Assets.xcassets in Resources */,
+				F24AD7232888C0BD000F65D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24AD72C2888C0C1000F65D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24AD7362888C0C1000F65D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F24AD7142888C0BD000F65D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24AD7202888C0BD000F65D2 /* ViewController.swift in Sources */,
+				F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */,
+				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24AD72A2888C0C1000F65D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24AD7342888C0C1000F65D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24AD73D2888C0C1000F65D2 /* McDonaldsMenuUITests.swift in Sources */,
+				F24AD73F2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F24AD7302888C0C1000F65D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F24AD7172888C0BD000F65D2 /* McDonaldsMenu */;
+			targetProxy = F24AD72F2888C0C1000F65D2 /* PBXContainerItemProxy */;
+		};
+		F24AD73A2888C0C1000F65D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F24AD7172888C0BD000F65D2 /* McDonaldsMenu */;
+			targetProxy = F24AD7392888C0C1000F65D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F24AD7212888C0BD000F65D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24AD7222888C0BD000F65D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24AD7272888C0C0000F65D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F24AD7402888C0C1000F65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F24AD7412888C0C1000F65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F24AD7432888C0C1000F65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4ZUPHQCZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = McDonaldsMenu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F24AD7442888C0C1000F65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4ZUPHQCZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = McDonaldsMenu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F24AD7462888C0C1000F65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4ZUPHQCZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/McDonaldsMenu.app/McDonaldsMenu";
+			};
+			name = Debug;
+		};
+		F24AD7472888C0C1000F65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4ZUPHQCZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/McDonaldsMenu.app/McDonaldsMenu";
+			};
+			name = Release;
+		};
+		F24AD7492888C0C1000F65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4ZUPHQCZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = McDonaldsMenu;
+			};
+			name = Debug;
+		};
+		F24AD74A2888C0C1000F65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4ZUPHQCZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = McDonaldsMenu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F24AD7132888C0BD000F65D2 /* Build configuration list for PBXProject "McDonaldsMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24AD7402888C0C1000F65D2 /* Debug */,
+				F24AD7412888C0C1000F65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24AD7422888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24AD7432888C0C1000F65D2 /* Debug */,
+				F24AD7442888C0C1000F65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24AD7452888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24AD7462888C0C1000F65D2 /* Debug */,
+				F24AD7472888C0C1000F65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24AD7482888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24AD7492888C0C1000F65D2 /* Debug */,
+				F24AD74A2888C0C1000F65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F24AD7102888C0BD000F65D2 /* Project object */;
+}
