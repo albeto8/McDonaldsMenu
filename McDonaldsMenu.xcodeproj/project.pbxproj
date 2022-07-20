@@ -14,19 +14,10 @@
 		F24AD7252888C0C0000F65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7242888C0C0000F65D2 /* Assets.xcassets */; };
 		F24AD7282888C0C0000F65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */; };
 		F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */; };
-		F24AD73D2888C0C1000F65D2 /* McDonaldsMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD73C2888C0C1000F65D2 /* McDonaldsMenuUITests.swift */; };
-		F24AD73F2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD73E2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F24AD72F2888C0C1000F65D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F24AD7102888C0BD000F65D2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F24AD7172888C0BD000F65D2;
-			remoteInfo = McDonaldsMenu;
-		};
-		F24AD7392888C0C1000F65D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F24AD7102888C0BD000F65D2 /* Project object */;
 			proxyType = 1;
@@ -46,9 +37,6 @@
 		F24AD7292888C0C0000F65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuTests.swift; sourceTree = "<group>"; };
-		F24AD7382888C0C1000F65D2 /* McDonaldsMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F24AD73C2888C0C1000F65D2 /* McDonaldsMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuUITests.swift; sourceTree = "<group>"; };
-		F24AD73E2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F24AD7352888C0C1000F65D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +62,6 @@
 			children = (
 				F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */,
 				F24AD7312888C0C1000F65D2 /* McDonaldsMenuTests */,
-				F24AD73B2888C0C1000F65D2 /* McDonaldsMenuUITests */,
 				F24AD7192888C0BD000F65D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +71,6 @@
 			children = (
 				F24AD7182888C0BD000F65D2 /* McDonaldsMenu.app */,
 				F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */,
-				F24AD7382888C0C1000F65D2 /* McDonaldsMenuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */,
 			);
 			path = McDonaldsMenuTests;
-			sourceTree = "<group>";
-		};
-		F24AD73B2888C0C1000F65D2 /* McDonaldsMenuUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F24AD73C2888C0C1000F65D2 /* McDonaldsMenuUITests.swift */,
-				F24AD73E2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift */,
-			);
-			path = McDonaldsMenuUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +135,6 @@
 			productReference = F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F24AD7372888C0C1000F65D2 /* McDonaldsMenuUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F24AD7482888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenuUITests" */;
-			buildPhases = (
-				F24AD7342888C0C1000F65D2 /* Sources */,
-				F24AD7352888C0C1000F65D2 /* Frameworks */,
-				F24AD7362888C0C1000F65D2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F24AD73A2888C0C1000F65D2 /* PBXTargetDependency */,
-			);
-			name = McDonaldsMenuUITests;
-			productName = McDonaldsMenuUITests;
-			productReference = F24AD7382888C0C1000F65D2 /* McDonaldsMenuUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +149,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					F24AD72D2888C0C1000F65D2 = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = F24AD7172888C0BD000F65D2;
-					};
-					F24AD7372888C0C1000F65D2 = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = F24AD7172888C0BD000F65D2;
 					};
@@ -221,7 +169,6 @@
 			targets = (
 				F24AD7172888C0BD000F65D2 /* McDonaldsMenu */,
 				F24AD72D2888C0C1000F65D2 /* McDonaldsMenuTests */,
-				F24AD7372888C0C1000F65D2 /* McDonaldsMenuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F24AD72C2888C0C1000F65D2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F24AD7362888C0C1000F65D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F24AD7342888C0C1000F65D2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F24AD73D2888C0C1000F65D2 /* McDonaldsMenuUITests.swift in Sources */,
-				F24AD73F2888C0C1000F65D2 /* McDonaldsMenuUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = F24AD7172888C0BD000F65D2 /* McDonaldsMenu */;
 			targetProxy = F24AD72F2888C0C1000F65D2 /* PBXContainerItemProxy */;
-		};
-		F24AD73A2888C0C1000F65D2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F24AD7172888C0BD000F65D2 /* McDonaldsMenu */;
-			targetProxy = F24AD7392888C0C1000F65D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -526,42 +452,6 @@
 			};
 			name = Release;
 		};
-		F24AD7492888C0C1000F65D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D4ZUPHQCZR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenuUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = McDonaldsMenu;
-			};
-			name = Debug;
-		};
-		F24AD74A2888C0C1000F65D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D4ZUPHQCZR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mario.McDonaldsMenuUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = McDonaldsMenu;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +478,6 @@
 			buildConfigurations = (
 				F24AD7462888C0C1000F65D2 /* Debug */,
 				F24AD7472888C0C1000F65D2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F24AD7482888C0C1000F65D2 /* Build configuration list for PBXNativeTarget "McDonaldsMenuUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F24AD7492888C0C1000F65D2 /* Debug */,
-				F24AD74A2888C0C1000F65D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
