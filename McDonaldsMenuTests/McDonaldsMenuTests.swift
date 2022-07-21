@@ -21,7 +21,7 @@ class McDonaldsMenuTests: XCTestCase {
         let sut = MainMenuViewController()
         let beberageCategory = makeMenuCategory(title: "Beverages")
         
-        sut.display([beberageCategory])
+        sut.display([beberageCategory, beberageCategory])
         
         sut.loadViewIfNeeded()
         record(sut, device: .iPhoneX)
