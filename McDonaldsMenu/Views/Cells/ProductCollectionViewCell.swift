@@ -11,16 +11,16 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     static let identifier = "ProductCollectionViewCell"
     
     private lazy var productImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        iv.setDimensions(width: 100, height: 100)
-        return iv
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.setDimensions(width: 100, height: 100)
+        return imageView
     }()
     
     private let productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont(name: "Inter-Regular", size: 12)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.text = "Some text"

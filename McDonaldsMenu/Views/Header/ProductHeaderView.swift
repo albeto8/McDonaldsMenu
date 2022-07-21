@@ -12,7 +12,7 @@ final class ProductHeaderView: UITableViewHeaderFooterView {
     
     private let sectionTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 36, weight: .semibold)
+        label.font = UIFont(name: "Inter-Bold", size: 36)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = .black
