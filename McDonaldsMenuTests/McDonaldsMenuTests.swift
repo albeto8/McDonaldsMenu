@@ -24,6 +24,7 @@ class McDonaldsMenuTests: XCTestCase {
         sut.display([beberageCategory, beberageCategory])
         
         sut.loadViewIfNeeded()
+        
         record(sut, device: .iPhoneX)
     }
     

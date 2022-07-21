@@ -18,6 +18,7 @@
 		F27F7C432888C5F200185602 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F27F7C422888C5F200185602 /* SnapshotTesting */; };
 		F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C462888C70000185602 /* CollectionViewTableViewCell.swift */; };
 		F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C482888E28000185602 /* UIView+Autolayout.swift */; };
+		F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C4A2888ECA700185602 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F27F7C3F2888C34C00185602 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		F27F7C462888C70000185602 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		F27F7C482888E28000185602 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		F27F7C4A2888ECA700185602 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F27F7C462888C70000185602 /* CollectionViewTableViewCell.swift */,
+				F27F7C4A2888ECA700185602 /* ProductCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */,
 				F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */,
 				F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */,
+				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
