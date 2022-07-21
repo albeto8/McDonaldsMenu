@@ -21,17 +21,16 @@ final class DetailViewController: UIViewController {
     
     private let productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Inter-Regular", size: 12)
+        label.font = UIFont(name: "Inter-Bold", size: 24)
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = "Some text"
         label.textColor = .black
         return label
     }()
     
     init(product: Product) {
         self.product = product
-        super.init(nibName: String(describing: DetailViewController.self), bundle: Bundle(for: type(of: self)))
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder: NSCoder) {
@@ -43,5 +42,19 @@ final class DetailViewController: UIViewController {
         
         view.addSubview(productImageView)
         view.addSubview(productNameLabel)
+        
+        productImageView.centerX(inView: view)
+        productImageView.anchor(top: view.topAnchor, paddingTop: 51)
+        
+        productNameLabel.anchor(top: productImageView.bottomAnchor, paddingTop: 48)
+        productNameLabel.centerX(inView: view)
+        productNameLabel.setWidth(width: 180)
+        
+        configure(with: product)
+    }
+    
+    private func configure(with product: Product) {
+        productImageView.image = UIImage(named: product.imageName)
+        productNameLabel.text = product.name
     }
 }
