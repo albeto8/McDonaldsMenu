@@ -20,7 +20,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     
     private let productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 12)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.text = "Some text"
