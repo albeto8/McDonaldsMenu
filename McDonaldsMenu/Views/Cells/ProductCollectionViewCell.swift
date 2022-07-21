@@ -31,7 +31,8 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         layer.borderColor = UIColor(named: "itemBorderColor")!.cgColor
-        layer.borderWidth = 0.5
+        layer.borderWidth = 1
+        layer.cornerRadius = 5
         
         contentView.addSubview(productImageView)
         contentView.addSubview(productNameLabel)
