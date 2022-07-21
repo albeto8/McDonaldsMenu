@@ -92,8 +92,8 @@
 		F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F27F7C512888F0C500185602 /* Helpers */,
 				F27F7C4C2888F08000185602 /* Models */,
-				F27F7C482888E28000185602 /* UIView+Autolayout.swift */,
 				F27F7C442888C6DC00185602 /* Views */,
 				F27F7C3E2888C31400185602 /* Controllers */,
 				F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */,
@@ -155,6 +155,14 @@
 				F27F7C4F2888F09E00185602 /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F27F7C512888F0C500185602 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F27F7C482888E28000185602 /* UIView+Autolayout.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
