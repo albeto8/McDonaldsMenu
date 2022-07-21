@@ -10,7 +10,9 @@ import XCTest
 
 final class DetailViewControllerSnapshotTests: XCTestCase {
     func test_detailView() {
-        let sut = DetailViewController()
+        let product = Product(name: "Coca-Cola", 
+                              imageName: "cocaCola")
+        let sut = DetailViewController(product: product)
         
         sut.loadViewIfNeeded()
         

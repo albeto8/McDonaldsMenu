@@ -48,7 +48,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as? ProductCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: products[indexPath.row].name)
+        cell.configure(with: products[indexPath.row])
         
         return cell
     }

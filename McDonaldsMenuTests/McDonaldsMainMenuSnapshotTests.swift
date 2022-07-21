@@ -29,9 +29,9 @@ class McDonaldsMainMenuSnapshotTests: XCTestCase {
     }
     
     private func makeMenuCategory(title: String) -> MenuCategory {
-        let product = Product(name: "Coca-Cola")
-        let product2 = Product(name: "Sprite")
-        let product3 = Product(name: "Fanta")
+        let product = Product(name: "Coca-Cola", imageName: "cocaCola")
+        let product2 = Product(name: "Sprite", imageName: "cocaCola")
+        let product3 = Product(name: "Fanta", imageName: "cocaCola")
         return MenuCategory(title: title, products: [product, product2, product3])
     }
 }
