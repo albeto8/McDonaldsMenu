@@ -9,8 +9,11 @@
 import XCTest
 
 final class DetailViewControllerSnapshotTests: XCTestCase {
-
-    func test_zero() throws {
-        XCTFail("Tests not yet implemented in DetailViewControllerSnapshotTests")
+    func test_detailView() {
+        let sut = DetailViewController()
+        
+        sut.loadViewIfNeeded()
+        
+        record(sut, device: .iPhoneX)
     }
 }

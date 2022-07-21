@@ -41,6 +41,7 @@
 		F27F7C782889056600185602 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C662889056600185602 /* Inter-ExtraBold.ttf */; };
 		F27F7C792889056600185602 /* Inter-UI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */; };
 		F27F7C7B2889082C00185602 /* DetailViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */; };
+		F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7C2889089F00185602 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		F27F7C662889056600185602 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-BlackItalic.ttf"; sourceTree = "<group>"; };
 		F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		F27F7C7C2889089F00185602 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F27F7C3C2888C31000185602 /* MainMenuViewController.swift */,
+				F27F7C7C2889089F00185602 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */,
 				F27F7C4E2888F08D00185602 /* MenuCategory.swift in Sources */,
 				F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */,
+				F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */,
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
 			);
