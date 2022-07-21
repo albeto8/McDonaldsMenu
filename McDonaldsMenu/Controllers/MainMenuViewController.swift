@@ -12,6 +12,8 @@ final class MainMenuViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
         return tableView
     }()
     
