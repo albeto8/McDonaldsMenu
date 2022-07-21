@@ -18,6 +18,17 @@ final class CollectionViewTableViewCell: UITableViewCell {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         return collectionView
     }()
+    /*
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.text = "Some text"
+        label.textColor = .black
+        return label
+    }()
+     */
     
     private var products = [Product]()
     
@@ -46,13 +57,16 @@ final class CollectionViewTableViewCell: UITableViewCell {
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
-        let title = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: 50))
-        title.text = products[indexPath.row].name
-        title.textAlignment = .center
-        cell.contentView.addSubview(title)
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.5
+        
+        let titleLabel = UILabel()
+        titleLabel.text = products[indexPath.row].name
+        titleLabel.textAlignment = .center
+        
+        cell.contentView.addSubview(titleLabel)
+        titleLabel.center(inView: cell.contentView)
+        
         return cell
     }
     
