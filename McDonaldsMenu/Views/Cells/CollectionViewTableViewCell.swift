@@ -57,3 +57,9 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         products.count
     }
 }
+
+extension CollectionViewTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        16
+    }
+}
