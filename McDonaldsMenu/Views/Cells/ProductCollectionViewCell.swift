@@ -10,6 +10,14 @@ import UIKit
 final class ProductCollectionViewCell: UICollectionViewCell {
     static let identifier = "ProductCollectionViewCell"
     
+    private lazy var productImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.setDimensions(width: 100, height: 100)
+        return iv
+    }()
+    
     private let productNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
@@ -25,8 +33,14 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 0.5
         
+        contentView.addSubview(productImageView)
         contentView.addSubview(productNameLabel)
-        productNameLabel.center(inView: contentView)
+        
+        productImageView.centerX(inView: contentView)
+        productImageView.anchor(top: contentView.topAnchor)
+        
+        productNameLabel.centerX(inView: contentView)
+        productNameLabel.anchor(bottom: contentView.bottomAnchor, paddingBottom: 26)
     }
     
     required init?(coder: NSCoder) {
@@ -35,5 +49,6 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     
     func configure(with productName: String) {
         productNameLabel.text = productName
+        productImageView.image = UIImage(named: "cocaCola")
     }
 }
