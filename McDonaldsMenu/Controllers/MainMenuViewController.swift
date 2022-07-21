@@ -14,6 +14,7 @@ final class MainMenuViewController: UIViewController {
         tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
+        tableView.register(ProductHeaderView.self, forHeaderFooterViewReuseIdentifier: ProductHeaderView.identifier)
         return tableView
     }()
     
@@ -25,7 +26,7 @@ final class MainMenuViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.sectionHeaderTopPadding = 37
+        tableView.tableHeaderView = ProductHeaderView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -67,14 +68,11 @@ extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
         40
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.font = .systemFont(ofSize: 36, weight: .semibold)
-        header.textLabel?.frame = CGRect(x: header.bounds.origin.x, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = .black
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return menuCategories[section].title
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProductHeaderView.identifier) as? ProductHeaderView else { return UIView() }
+        
+        header.configure(with: menuCategories[section].title)
+        
+        return header
     }
 }
