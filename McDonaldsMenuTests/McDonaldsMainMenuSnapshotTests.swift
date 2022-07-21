@@ -1,5 +1,5 @@
 //
-//  McDonaldsMenuTests.swift
+//  McDonaldsMainMenuSnapshotTests.swift
 //  McDonaldsMenuTests
 //
 //  Created by Mario Alberto Barragán Espinosa on 20/07/22.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import McDonaldsMenu
 
-class McDonaldsMenuTests: XCTestCase {
+class McDonaldsMainMenuSnapshotTests: XCTestCase {
     func test_emptyScreen() {
         let sut = MainMenuViewController()
         
@@ -25,7 +25,7 @@ class McDonaldsMenuTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         
-        record(sut, device: .iPhoneX)
+        assert(sut, device: .iPhoneX)
     }
     
     private func makeMenuCategory(title: String) -> MenuCategory {

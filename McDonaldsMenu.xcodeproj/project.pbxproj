@@ -11,7 +11,7 @@
 		F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */; };
 		F24AD7252888C0C0000F65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7242888C0C0000F65D2 /* Assets.xcassets */; };
 		F24AD7282888C0C0000F65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */; };
-		F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */; };
+		F24AD7332888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift */; };
 		F24AD7502888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */; };
 		F27F7C3D2888C31000185602 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C3C2888C31000185602 /* MainMenuViewController.swift */; };
 		F27F7C402888C34C00185602 /* __Snapshots__ in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C3F2888C34C00185602 /* __Snapshots__ */; };
@@ -40,6 +40,7 @@
 		F27F7C772889056600185602 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C652889056600185602 /* Inter-Bold.ttf */; };
 		F27F7C782889056600185602 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C662889056600185602 /* Inter-ExtraBold.ttf */; };
 		F27F7C792889056600185602 /* Inter-UI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */; };
+		F27F7C7B2889082C00185602 /* DetailViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,7 @@
 		F24AD7272888C0C0000F65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F24AD7292888C0C0000F65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMenuTests.swift; sourceTree = "<group>"; };
+		F24AD7322888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMainMenuSnapshotTests.swift; sourceTree = "<group>"; };
 		F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+SnapshotTestingHelpers.swift"; sourceTree = "<group>"; };
 		F27F7C3C2888C31000185602 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		F27F7C3F2888C34C00185602 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		F27F7C652889056600185602 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		F27F7C662889056600185602 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,8 @@
 			children = (
 				F27F7C3F2888C34C00185602 /* __Snapshots__ */,
 				F24AD74E2888C1F1000F65D2 /* Helpers */,
-				F24AD7322888C0C1000F65D2 /* McDonaldsMenuTests.swift */,
+				F24AD7322888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift */,
+				F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */,
 			);
 			path = McDonaldsMenuTests;
 			sourceTree = "<group>";
@@ -381,7 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24AD7332888C0C1000F65D2 /* McDonaldsMenuTests.swift in Sources */,
+				F24AD7332888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift in Sources */,
+				F27F7C7B2889082C00185602 /* DetailViewControllerSnapshotTests.swift in Sources */,
 				F24AD7502888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
