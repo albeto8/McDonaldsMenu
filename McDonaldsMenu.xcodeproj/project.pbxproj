@@ -19,6 +19,8 @@
 		F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C462888C70000185602 /* CollectionViewTableViewCell.swift */; };
 		F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C482888E28000185602 /* UIView+Autolayout.swift */; };
 		F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C4A2888ECA700185602 /* ProductCollectionViewCell.swift */; };
+		F27F7C4E2888F08D00185602 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C4D2888F08D00185602 /* MenuCategory.swift */; };
+		F27F7C502888F09E00185602 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C4F2888F09E00185602 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		F27F7C462888C70000185602 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		F27F7C482888E28000185602 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		F27F7C4A2888ECA700185602 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		F27F7C4D2888F08D00185602 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
+		F27F7C4F2888F09E00185602 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F27F7C4C2888F08000185602 /* Models */,
 				F27F7C482888E28000185602 /* UIView+Autolayout.swift */,
 				F27F7C442888C6DC00185602 /* Views */,
 				F27F7C3E2888C31400185602 /* Controllers */,
@@ -141,6 +146,15 @@
 				F27F7C4A2888ECA700185602 /* ProductCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F27F7C4C2888F08000185602 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F27F7C4D2888F08D00185602 /* MenuCategory.swift */,
+				F27F7C4F2888F09E00185602 /* Product.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27F7C3D2888C31000185602 /* MainMenuViewController.swift in Sources */,
+				F27F7C502888F09E00185602 /* Product.swift in Sources */,
 				F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */,
 				F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */,
+				F27F7C4E2888F08D00185602 /* MenuCategory.swift in Sources */,
 				F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */,
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,

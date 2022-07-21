@@ -7,15 +7,6 @@
 
 import UIKit
 
-struct MenuCategory {
-    let title: String
-    let products: [Product]
-}
-
-struct Product {
-    let name: String
-}
-
 final class MainMenuViewController: UIViewController {
     
     private let tableView: UITableView = {
