@@ -10,7 +10,7 @@ import UIKit
 final class MainMenuViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        tableView.register(ProductCarouselTableViewCell.self, forCellReuseIdentifier: ProductCarouselTableViewCell.identifier)
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.register(ProductHeaderView.self, forHeaderFooterViewReuseIdentifier: ProductHeaderView.identifier)
@@ -62,7 +62,7 @@ extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCarouselTableViewCell.identifier, for: indexPath) as? ProductCarouselTableViewCell else {
             return UITableViewCell()
         }
         let category = menuCategories[indexPath.section]

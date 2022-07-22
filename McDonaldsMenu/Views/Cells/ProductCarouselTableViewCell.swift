@@ -1,5 +1,5 @@
 //
-//  CollectionViewTableViewCell.swift
+//  ProductCarouselTableViewCell.swift
 //  McDonaldsMenu
 //
 //  Created by Mario Alberto Barragán Espinosa on 20/07/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CollectionViewTableViewCell: UITableViewCell {
+final class ProductCarouselTableViewCell: UITableViewCell {
     static let identifier = "CollectionViewTableViewCell"
     
     private let collectionView: UICollectionView = {
@@ -47,7 +47,7 @@ final class CollectionViewTableViewCell: UITableViewCell {
     }
 }
 
-extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProductCarouselTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as? ProductCollectionViewCell else {
             return UICollectionViewCell()
@@ -62,7 +62,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     }
 }
 
-extension CollectionViewTableViewCell: UICollectionViewDelegateFlowLayout {
+extension ProductCarouselTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         16
     }
