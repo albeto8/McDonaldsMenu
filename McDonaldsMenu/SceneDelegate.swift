@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    let url = URL(string: "https://mcdonalds.trio.dev/menu")!
+        
+    private lazy var httpClient: HTTPClient = {
+      URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+    }()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -19,6 +25,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = MainMenuViewController()
         window?.makeKeyAndVisible()
+    }
+    
+    private func makeMenuLoader() -> AnyPublisher<[MenuCategory], Error> {
+      return httpClient
+        .getPublisher(url: url)
+        .dispatchOnMainQueue()
+        .tryMap(MenuMapper.map)
+        .eraseToAnyPublisher()
     }
 }
 
