@@ -41,7 +41,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         productImageView.anchor(top: contentView.topAnchor)
         
         productNameLabel.centerX(inView: contentView)
-        productNameLabel.anchor(bottom: contentView.bottomAnchor, paddingBottom: 26)
+        productNameLabel.anchor(leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, paddingBottom: 26)
     }
     
     required init?(coder: NSCoder) {
