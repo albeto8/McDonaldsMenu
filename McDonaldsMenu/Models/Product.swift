@@ -10,4 +10,6 @@ import Foundation
 struct Product {
     let name: String
     let imageName: String
+    let productDescription: String
+    let price: Double
 }
