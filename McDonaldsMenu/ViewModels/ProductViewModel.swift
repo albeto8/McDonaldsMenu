@@ -13,7 +13,7 @@ final class ProductViewModel<Image> {
     
     private let model: Product
     private let imageLoader: ((URL) -> ImageDataLoader.Publisher)?
-    private let imageTransformer: ((Data) -> Image?)?
+    private let imageTransformer: (Data) -> Image?
     
     private var cancellable: Cancellable?
     
@@ -22,7 +22,7 @@ final class ProductViewModel<Image> {
     
     init(model: Product,
          imageLoader: ((URL) -> ImageDataLoader.Publisher)? = nil, 
-         imageTransformer: ((Data) -> Image)? = nil) {
+         imageTransformer: @escaping (Data) -> Image?) {
         self.model = model
         self.imageLoader = imageLoader
         self.imageTransformer = imageTransformer
@@ -30,10 +30,6 @@ final class ProductViewModel<Image> {
     
     var name: String {
         model.name
-    }
-    
-    var imageData: Data {
-        Data()
     }
     
     func loadImageData() {
@@ -53,7 +49,7 @@ final class ProductViewModel<Image> {
             case .finished: break
             }
         }, receiveValue: { [weak self] imageData in
-            if let image = self?.imageTransformer?(imageData) {
+            if let image = self?.imageTransformer(imageData) {
                 self?.onImageLoad?(image)
             } else {
                 //TODO Handle sad path for invalid image

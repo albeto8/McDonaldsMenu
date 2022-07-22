@@ -50,6 +50,11 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     
     func configure(with productViewModel: ProductViewModel<UIImage>) {
         productNameLabel.text = productViewModel.name
-        //productImageView.image = UIImage(named: productViewModel.imageData)
+        productViewModel.loadImageData()
+        productViewModel.onImageLoad = { image in
+            DispatchQueue.main.async {
+                self.productImageView.image = image
+            }
+        }
     }
 }

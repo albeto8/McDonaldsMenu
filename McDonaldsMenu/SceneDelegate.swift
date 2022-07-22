@@ -29,7 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func makeMainViewController() -> MainMenuViewController {
         let menuCategoriesViewModel = MenuCategoriesViewModel(loader: makeMenuLoader)
-        let viewController = MainMenuViewController(menuCategoriesViewModel: menuCategoriesViewModel)
+        let viewController = MainMenuViewController(menuCategoriesViewModel: menuCategoriesViewModel, 
+                                                    imageLoader: makeImageLoader(url:))
         
         menuCategoriesViewModel.onFetch = { menuCategories in
             viewController.display(menuCategories)
