@@ -13,6 +13,8 @@
 		F24AD7282888C0C0000F65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7262888C0C0000F65D2 /* LaunchScreen.storyboard */; };
 		F24AD7332888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD7322888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift */; };
 		F24AD7502888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */; };
+		F25B1F73288A42F0006B0EBE /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B1F72288A42F0006B0EBE /* HttpClient.swift */; };
+		F25B1F75288A430F006B0EBE /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25B1F74288A430F006B0EBE /* URLSessionHTTPClient.swift */; };
 		F27F7C3D2888C31000185602 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C3C2888C31000185602 /* MainMenuViewController.swift */; };
 		F27F7C402888C34C00185602 /* __Snapshots__ in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C3F2888C34C00185602 /* __Snapshots__ */; };
 		F27F7C432888C5F200185602 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F27F7C422888C5F200185602 /* SnapshotTesting */; };
@@ -64,6 +66,8 @@
 		F24AD72E2888C0C1000F65D2 /* McDonaldsMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McDonaldsMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24AD7322888C0C1000F65D2 /* McDonaldsMainMenuSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McDonaldsMainMenuSnapshotTests.swift; sourceTree = "<group>"; };
 		F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+SnapshotTestingHelpers.swift"; sourceTree = "<group>"; };
+		F25B1F72288A42F0006B0EBE /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		F25B1F74288A430F006B0EBE /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		F27F7C3C2888C31000185602 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		F27F7C3F2888C34C00185602 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		F27F7C462888C70000185602 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F25B1F71288A42DB006B0EBE /* Networking */,
 				F27F7C552889054000185602 /* Fonts */,
 				F27F7C512888F0C500185602 /* Helpers */,
 				F27F7C4C2888F08000185602 /* Models */,
@@ -165,6 +170,15 @@
 				F24AD74F2888C211000F65D2 /* XCTestCase+SnapshotTestingHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F25B1F71288A42DB006B0EBE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F25B1F72288A42F0006B0EBE /* HttpClient.swift */,
+				F25B1F74288A430F006B0EBE /* URLSessionHTTPClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		F27F7C3E2888C31400185602 /* Controllers */ = {
@@ -378,9 +392,11 @@
 				F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */,
 				F27F7C4E2888F08D00185602 /* MenuCategory.swift in Sources */,
 				F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */,
+				F25B1F73288A42F0006B0EBE /* HttpClient.swift in Sources */,
 				F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */,
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
+				F25B1F75288A430F006B0EBE /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
