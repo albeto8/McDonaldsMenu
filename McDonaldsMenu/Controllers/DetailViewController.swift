@@ -28,6 +28,26 @@ final class DetailViewController: UIViewController {
         return label
     }()
     
+    private let priceContainerView: UIView = {
+        let view = UIView()
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 15
+        view.setDimensions(width: 78, height: 30)
+        return view
+    }()
+    
+    private let priceLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Inter-Regular", size: 16)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = .black
+        label.text = "$10"
+        return label
+    }()
+    
     init(product: Product) {
         self.product = product
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
@@ -42,6 +62,8 @@ final class DetailViewController: UIViewController {
         
         view.addSubview(productImageView)
         view.addSubview(productNameLabel)
+        view.addSubview(priceContainerView)
+        priceContainerView.addSubview(priceLabel)
         
         productImageView.centerX(inView: view)
         productImageView.anchor(top: view.topAnchor, paddingTop: 51)
@@ -49,6 +71,10 @@ final class DetailViewController: UIViewController {
         productNameLabel.anchor(top: productImageView.bottomAnchor, paddingTop: 48)
         productNameLabel.centerX(inView: view)
         productNameLabel.setWidth(width: 180)
+        
+        priceContainerView.centerX(inView: view)
+        priceContainerView.anchor(top: productNameLabel.bottomAnchor, paddingTop: 28)
+        priceLabel.center(inView: priceContainerView)
         
         configure(with: product)
     }
