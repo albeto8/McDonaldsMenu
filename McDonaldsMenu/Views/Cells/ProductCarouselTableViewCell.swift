@@ -19,7 +19,7 @@ final class ProductCarouselTableViewCell: UITableViewCell {
         return collectionView
     }()
     
-    private var productsViewModel = [ProductViewModel<UIImage>]()
+    private var productItemCellControllers = [ProductItemCellController]()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -37,24 +37,20 @@ final class ProductCarouselTableViewCell: UITableViewCell {
         collectionView.frame = contentView.bounds
     }
     
-    func configure(with productsViewModel: [ProductViewModel<UIImage>]) {
-        self.productsViewModel = productsViewModel
+    func configure(with productItemCellControllers: [ProductItemCellController]) {
+        self.productItemCellControllers = productItemCellControllers
         collectionView.reloadData()
     }
 }
 
 extension ProductCarouselTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as? ProductCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        cell.configure(with: productsViewModel[indexPath.row])
-        
-        return cell
+ 
+        return productItemCellControllers[indexPath.row].view(in: collectionView, for: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        productsViewModel.count
+        productItemCellControllers.count
     }
 }
 

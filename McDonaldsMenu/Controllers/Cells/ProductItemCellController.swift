@@ -14,8 +14,8 @@ final class ProductItemCellController {
         self.viewModel = viewModel
     }
     
-    func view() -> UICollectionViewCell {
-        let cell = binded(ProductCollectionViewCell())
+    func view(in collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = binded(collectionView.dequeueReusableCell(for: indexPath))
         viewModel.loadImageData()
         return cell
     }
@@ -29,5 +29,12 @@ final class ProductItemCellController {
         }
 
         return cell
+    }
+}
+
+extension UICollectionView {
+    func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
+        let identifier = String(describing: T.self)
+        return dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T
     }
 }
