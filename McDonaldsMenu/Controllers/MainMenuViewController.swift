@@ -20,6 +20,7 @@ final class MainMenuViewController: UIViewController {
     private let menuCategoriesViewModel: MenuCategoriesViewModel?
     
     var menuCategories = [MenuCategory]()
+    var productCarouselCellController = [ProductCarouselCellController]()
     
     init(menuCategoriesViewModel: MenuCategoriesViewModel? = nil) {
         self.menuCategoriesViewModel = menuCategoriesViewModel
@@ -47,6 +48,7 @@ final class MainMenuViewController: UIViewController {
     
     func display(_ menuCategories: [MenuCategory]) {
         self.menuCategories = menuCategories
+        self.productCarouselCellController = menuCategories.map({ ProductCarouselCellController(model: $0.products)})
         self.tableView.reloadData()
     }
 }
@@ -62,13 +64,8 @@ extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCarouselTableViewCell.identifier, for: indexPath) as? ProductCarouselTableViewCell else {
-            return UITableViewCell()
-        }
-        let category = menuCategories[indexPath.section]
-        cell.configure(with: category.products)
-        
-        return cell
+        let cellController = productCarouselCellController[indexPath.section]
+        return cellController.view(in: tableView)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

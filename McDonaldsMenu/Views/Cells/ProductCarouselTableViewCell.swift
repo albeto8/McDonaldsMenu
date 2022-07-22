@@ -8,7 +8,7 @@
 import UIKit
 
 final class ProductCarouselTableViewCell: UITableViewCell {
-    static let identifier = "CollectionViewTableViewCell"
+    static let identifier = String(describing: ProductCarouselTableViewCell.self)
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -37,11 +37,7 @@ final class ProductCarouselTableViewCell: UITableViewCell {
         collectionView.frame = contentView.bounds
     }
     
-    func configure(with products: [Product]) {
-        let productsViewModel = products.map {
-            ProductViewModel<UIImage>(model: $0)
-        }
-        
+    func configure(with productsViewModel: [ProductViewModel<UIImage>]) {
         self.productsViewModel = productsViewModel
         collectionView.reloadData()
     }
