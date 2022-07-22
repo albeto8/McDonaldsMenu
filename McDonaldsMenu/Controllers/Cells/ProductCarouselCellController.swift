@@ -18,14 +18,13 @@ final class ProductCarouselCellController {
     
     func view(in tableView: UITableView) -> UITableViewCell {
         cell = tableView.dequeueReusableCell()
-        configure()
+        cell?.configure(with: model.toViewModels())
         return cell!
     }
-    
-    func configure() {
-        let productsViewModel = model.map {
-            ProductViewModel<UIImage>(model: $0)
-        }
-        cell?.configure(with: productsViewModel)
+}
+
+private extension Array where Element == Product {
+    func toViewModels() -> [ProductViewModel<UIImage>] {
+        return map { ProductViewModel<UIImage>(model: $0) }
     }
 }
