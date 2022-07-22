@@ -48,8 +48,8 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with product: Product) {
-        productNameLabel.text = product.name
-        productImageView.image = UIImage(named: product.imageName)
+    func configure(with productViewModel: ProductViewModel<UIImage>) {
+        productNameLabel.text = productViewModel.name
+        //productImageView.image = UIImage(named: productViewModel.imageData)
     }
 }

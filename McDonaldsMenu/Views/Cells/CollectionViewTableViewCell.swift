@@ -19,7 +19,7 @@ final class CollectionViewTableViewCell: UITableViewCell {
         return collectionView
     }()
     
-    private var products = [Product]()
+    private var productsViewModel = [ProductViewModel<UIImage>]()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,7 +38,11 @@ final class CollectionViewTableViewCell: UITableViewCell {
     }
     
     func configure(with products: [Product]) {
-        self.products = products
+        let productsViewModel = products.map {
+            ProductViewModel<UIImage>(model: $0)
+        }
+        
+        self.productsViewModel = productsViewModel
         collectionView.reloadData()
     }
 }
@@ -48,13 +52,13 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as? ProductCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: products[indexPath.row])
+        cell.configure(with: productsViewModel[indexPath.row])
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        products.count
+        productsViewModel.count
     }
 }
 
