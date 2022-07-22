@@ -23,8 +23,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = MainMenuViewController()
+        window?.rootViewController = makeMainViewController()
         window?.makeKeyAndVisible()
+    }
+    
+    private func makeMainViewController() -> MainMenuViewController {
+        let menuCategoriesViewModel = MenuCategoriesViewModel(loader: makeMenuLoader)
+        let viewController = MainMenuViewController(menuCategoriesViewModel: menuCategoriesViewModel)
+        
+        menuCategoriesViewModel.onFetch = { menuCategories in
+            viewController.display(menuCategories)
+        }
+        
+        return viewController
     }
     
     private func makeMenuLoader() -> AnyPublisher<[MenuCategory], Error> {

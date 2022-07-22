@@ -47,6 +47,7 @@
 		F27F7C792889056600185602 /* Inter-UI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */; };
 		F27F7C7B2889082C00185602 /* DetailViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */; };
 		F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7C2889089F00185602 /* DetailViewController.swift */; };
+		F2D7E39D288B02F60045934E /* MenuCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-BlackItalic.ttf"; sourceTree = "<group>"; };
 		F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		F27F7C7C2889089F00185602 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				F27F7C512888F0C500185602 /* Helpers */,
 				F27F7C4C2888F08000185602 /* Models */,
 				F27F7C442888C6DC00185602 /* Views */,
+				F2D7E39B288B02B80045934E /* ViewModels */,
 				F27F7C3E2888C31400185602 /* Controllers */,
 				F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */,
 				F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */,
@@ -265,6 +268,14 @@
 				F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F2D7E39B288B02B80045934E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +420,7 @@
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
 				F25B1F75288A430F006B0EBE /* URLSessionHTTPClient.swift in Sources */,
+				F2D7E39D288B02F60045934E /* MenuCategoriesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

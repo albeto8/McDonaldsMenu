@@ -8,7 +8,6 @@
 import UIKit
 
 final class MainMenuViewController: UIViewController {
-    
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
@@ -18,7 +17,18 @@ final class MainMenuViewController: UIViewController {
         return tableView
     }()
     
+    private let menuCategoriesViewModel: MenuCategoriesViewModel
+    
     var menuCategories = [MenuCategory]()
+    
+    init(menuCategoriesViewModel: MenuCategoriesViewModel) {
+        self.menuCategoriesViewModel = menuCategoriesViewModel
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +37,7 @@ final class MainMenuViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableHeaderView = ProductHeaderView()
+        menuCategoriesViewModel.fetch()
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,7 +65,7 @@ extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
-        let category = menuCategories[indexPath.row]
+        let category = menuCategories[indexPath.section]
         cell.configure(with: category.products)
         
         return cell
