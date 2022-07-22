@@ -17,11 +17,11 @@ final class MainMenuViewController: UIViewController {
         return tableView
     }()
     
-    private let menuCategoriesViewModel: MenuCategoriesViewModel
+    private let menuCategoriesViewModel: MenuCategoriesViewModel?
     
     var menuCategories = [MenuCategory]()
     
-    init(menuCategoriesViewModel: MenuCategoriesViewModel) {
+    init(menuCategoriesViewModel: MenuCategoriesViewModel? = nil) {
         self.menuCategoriesViewModel = menuCategoriesViewModel
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
@@ -37,7 +37,7 @@ final class MainMenuViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableHeaderView = ProductHeaderView()
-        menuCategoriesViewModel.fetch()
+        menuCategoriesViewModel?.fetch()
     }
     
     override func viewDidLayoutSubviews() {
