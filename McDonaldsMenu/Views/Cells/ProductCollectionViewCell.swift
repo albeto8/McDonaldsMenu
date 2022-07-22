@@ -10,7 +10,7 @@ import UIKit
 final class ProductCollectionViewCell: UICollectionViewCell {
     static let identifier = "ProductCollectionViewCell"
     
-    private lazy var productImageView: UIImageView = {
+    lazy var productImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -18,7 +18,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    private let productNameLabel: UILabel = {
+    let productNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Inter-Regular", size: 12)
         label.numberOfLines = 0
@@ -49,12 +49,6 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with productViewModel: ProductViewModel<UIImage>) {
-        productNameLabel.text = productViewModel.name
-        productViewModel.loadImageData()
-        productViewModel.onImageLoad = { image in
-            DispatchQueue.main.async {
-                self.productImageView.image = image
-            }
-        }
+        
     }
 }

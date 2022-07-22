@@ -47,6 +47,7 @@
 		F27F7C792889056600185602 /* Inter-UI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */; };
 		F27F7C7B2889082C00185602 /* DetailViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */; };
 		F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7C2889089F00185602 /* DetailViewController.swift */; };
+		F28C5761288B490300A0CE96 /* ProductItemCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28C5760288B490300A0CE96 /* ProductItemCellController.swift */; };
 		F2D7E39D288B02F60045934E /* MenuCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */; };
 		F2FFBC8A288B261400026A6C /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFBC89288B261400026A6C /* ImageDataMapper.swift */; };
 		F2FFBC8C288B264B00026A6C /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFBC8B288B264B00026A6C /* ProductViewModel.swift */; };
@@ -107,6 +108,7 @@
 		F27F7C672889056600185602 /* Inter-UI-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-UI-BlackItalic.ttf"; sourceTree = "<group>"; };
 		F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		F27F7C7C2889089F00185602 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F28C5760288B490300A0CE96 /* ProductItemCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCellController.swift; sourceTree = "<group>"; };
 		F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoriesViewModel.swift; sourceTree = "<group>"; };
 		F2FFBC89288B261400026A6C /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
 		F2FFBC8B288B264B00026A6C /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				F2FFBC8E288B2ACC00026A6C /* ProductCarouselCellController.swift */,
+				F28C5760288B490300A0CE96 /* ProductItemCellController.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				F25B1F77288A436A006B0EBE /* CombineHelpers.swift in Sources */,
 				F25B1F73288A42F0006B0EBE /* HttpClient.swift in Sources */,
 				F25B1F7B288A4581006B0EBE /* MenuMapper.swift in Sources */,
+				F28C5761288B490300A0CE96 /* ProductItemCellController.swift in Sources */,
 				F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */,
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F2FFBC8C288B264B00026A6C /* ProductViewModel.swift in Sources */,
