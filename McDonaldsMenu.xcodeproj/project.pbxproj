@@ -48,6 +48,8 @@
 		F27F7C7B2889082C00185602 /* DetailViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */; };
 		F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7C7C2889089F00185602 /* DetailViewController.swift */; };
 		F2D7E39D288B02F60045934E /* MenuCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */; };
+		F2FFBC8A288B261400026A6C /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFBC89288B261400026A6C /* ImageDataMapper.swift */; };
+		F2FFBC8C288B264B00026A6C /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFBC8B288B264B00026A6C /* ProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		F27F7C7A2889082C00185602 /* DetailViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		F27F7C7C2889089F00185602 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoriesViewModel.swift; sourceTree = "<group>"; };
+		F2FFBC89288B261400026A6C /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
+		F2FFBC8B288B264B00026A6C /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 				F25B1F74288A430F006B0EBE /* URLSessionHTTPClient.swift */,
 				F25B1F78288A4385006B0EBE /* ImageDataLoader.swift */,
 				F25B1F7A288A4581006B0EBE /* MenuMapper.swift */,
+				F2FFBC89288B261400026A6C /* ImageDataMapper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D7E39C288B02F60045934E /* MenuCategoriesViewModel.swift */,
+				F2FFBC8B288B264B00026A6C /* ProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				F27F7C502888F09E00185602 /* Product.swift in Sources */,
 				F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */,
 				F25B1F79288A4385006B0EBE /* ImageDataLoader.swift in Sources */,
+				F2FFBC8A288B261400026A6C /* ImageDataMapper.swift in Sources */,
 				F27F7C492888E28000185602 /* UIView+Autolayout.swift in Sources */,
 				F27F7C4E2888F08D00185602 /* MenuCategory.swift in Sources */,
 				F27F7C472888C70000185602 /* CollectionViewTableViewCell.swift in Sources */,
@@ -418,6 +425,7 @@
 				F25B1F7B288A4581006B0EBE /* MenuMapper.swift in Sources */,
 				F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */,
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
+				F2FFBC8C288B264B00026A6C /* ProductViewModel.swift in Sources */,
 				F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */,
 				F25B1F75288A430F006B0EBE /* URLSessionHTTPClient.swift in Sources */,
 				F2D7E39D288B02F60045934E /* MenuCategoriesViewModel.swift in Sources */,

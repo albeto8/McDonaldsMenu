@@ -39,11 +39,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeMenuLoader() -> AnyPublisher<[MenuCategory], Error> {
-      return httpClient
-        .getPublisher(url: url)
-        .dispatchOnMainQueue()
-        .tryMap(MenuMapper.map)
-        .eraseToAnyPublisher()
+        return httpClient
+            .getPublisher(url: url)
+            .dispatchOnMainQueue()
+            .tryMap(MenuMapper.map)
+            .eraseToAnyPublisher()
+    }
+    
+    private func makeImageLoader(url: URL) -> AnyPublisher<Data, Error> {
+        return httpClient
+            .getPublisher(url: url)
+            .dispatchOnMainQueue()
+            .tryMap(ImageDataMapper.map)
+            .eraseToAnyPublisher()
     }
 }
 
