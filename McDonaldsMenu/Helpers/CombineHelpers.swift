@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
+//MARK: Networking
+
 extension HTTPClient {
     typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
     
@@ -36,6 +38,22 @@ extension ImageDataLoader {
             }
         }
         .eraseToAnyPublisher()
+    }
+}
+
+//MARK: Image caching
+
+extension Publisher where Output == Data {
+    func caching(to cache: ProductItemImageDataCache, using url: URL) -> AnyPublisher<Output, Failure> {
+        handleEvents(receiveOutput: { data in
+            cache.saveIgnoringResult(data, for: url)
+        }).eraseToAnyPublisher()
+    }
+}
+
+private extension ProductItemImageDataCache {
+    func saveIgnoringResult(_ data: Data, for url: URL) {
+        try? save(data, for: url)
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20BD128288DE144005761EE /* InMemoryProductItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20BD127288DE144005761EE /* InMemoryProductItemStore.swift */; };
+		F20BD12C288DE3C0005761EE /* LocalProductImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20BD12B288DE3C0005761EE /* LocalProductImageDataLoader.swift */; };
 		F24AD71C2888C0BD000F65D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */; };
 		F24AD71E2888C0BD000F65D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */; };
 		F24AD7252888C0C0000F65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24AD7242888C0C0000F65D2 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F20BD127288DE144005761EE /* InMemoryProductItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryProductItemStore.swift; sourceTree = "<group>"; };
+		F20BD12B288DE3C0005761EE /* LocalProductImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProductImageDataLoader.swift; sourceTree = "<group>"; };
 		F24AD7182888C0BD000F65D2 /* McDonaldsMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McDonaldsMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24AD71B2888C0BD000F65D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F24AD71D2888C0BD000F65D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20BD124288DE0D6005761EE /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				F20BD12E288DE505005761EE /* Infrastructure */,
+				F20BD12B288DE3C0005761EE /* LocalProductImageDataLoader.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
+		F20BD12D288DE4DA005761EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F25B1F78288A4385006B0EBE /* ImageDataLoader.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F20BD12E288DE505005761EE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F20BD127288DE144005761EE /* InMemoryProductItemStore.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		F24AD70F2888C0BD000F65D2 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +185,8 @@
 		F24AD71A2888C0BD000F65D2 /* McDonaldsMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F20BD12D288DE4DA005761EE /* Protocols */,
+				F20BD124288DE0D6005761EE /* Caching */,
 				F25B1F71288A42DB006B0EBE /* Networking */,
 				F27F7C552889054000185602 /* Fonts */,
 				F27F7C512888F0C500185602 /* Helpers */,
@@ -196,7 +227,6 @@
 			children = (
 				F25B1F72288A42F0006B0EBE /* HttpClient.swift */,
 				F25B1F74288A430F006B0EBE /* URLSessionHTTPClient.swift */,
-				F25B1F78288A4385006B0EBE /* ImageDataLoader.swift */,
 				F25B1F7A288A4581006B0EBE /* MenuMapper.swift */,
 				F2FFBC89288B261400026A6C /* ImageDataMapper.swift */,
 			);
@@ -439,9 +469,11 @@
 				F27F7C472888C70000185602 /* ProductCarouselTableViewCell.swift in Sources */,
 				F25B1F77288A436A006B0EBE /* CombineHelpers.swift in Sources */,
 				F25B1F73288A42F0006B0EBE /* HttpClient.swift in Sources */,
+				F20BD12C288DE3C0005761EE /* LocalProductImageDataLoader.swift in Sources */,
 				F25B1F7B288A4581006B0EBE /* MenuMapper.swift in Sources */,
 				F28C5761288B490300A0CE96 /* ProductItemCellController.swift in Sources */,
 				F27F7C7D2889089F00185602 /* DetailViewController.swift in Sources */,
+				F20BD128288DE144005761EE /* InMemoryProductItemStore.swift in Sources */,
 				F27F7C4B2888ECA700185602 /* ProductCollectionViewCell.swift in Sources */,
 				F2FFBC8C288B264B00026A6C /* ProductViewModel.swift in Sources */,
 				F2FFBC91288B2E6400026A6C /* UITableView+Extensions.swift in Sources */,
