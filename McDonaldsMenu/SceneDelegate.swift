@@ -25,7 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = makeMainViewController()
+        let navigationController = UINavigationController(rootViewController: makeMainViewController())
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
@@ -37,6 +39,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         menuCategoriesViewModel.onFetch = { menuCategories in
             viewController.display(menuCategories)
         }
+        
+        let logoImageView = UIImageView()
+        logoImageView.image = UIImage(named: "logo")
+        logoImageView.contentMode = .scaleAspectFit
+        viewController.navigationItem.titleView = logoImageView
         
         return viewController
     }
