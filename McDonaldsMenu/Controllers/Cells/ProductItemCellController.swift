@@ -23,9 +23,7 @@ final class ProductItemCellController {
     private func binded(_ cell: ProductCollectionViewCell) -> ProductCollectionViewCell {
         cell.productNameLabel.text = viewModel.name
         viewModel.onImageLoad = { image in
-            DispatchQueue.main.async {
-                cell.productImageView.image = image
-            }
+            cell.productImageView.image = image
         }
 
         return cell

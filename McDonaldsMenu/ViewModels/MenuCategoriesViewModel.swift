@@ -19,18 +19,18 @@ final class MenuCategoriesViewModel {
     }
     
     func fetch() {
-      cancellable = loader()
-        .sink(receiveCompletion: { completion in
-        switch completion {
-        case .failure:
-          // TODO: Handle error
-          print("Network failure!!!")
-          
-        case .finished: break
-        }
-      }, receiveValue: { [weak self] menuCategories in
-        self?.onFetch?(menuCategories)
-      })
+        cancellable = loader()
+            .dispatchOnMainQueue()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure:
+                    // TODO: Handle error
+                    print("Network failure!!!")
+                    
+                case .finished: break
+                }
+            }, receiveValue: { [weak self] menuCategories in
+                self?.onFetch?(menuCategories)
+            })
     }
-
 }

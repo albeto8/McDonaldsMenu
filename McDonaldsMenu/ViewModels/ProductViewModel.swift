@@ -40,20 +40,22 @@ final class ProductViewModel<Image> {
         
         onImageLoadingStateChange?(true)
         
-        cancellable = imageLoader?(imageURL).sink(receiveCompletion: { completion in
-            switch completion {
-            case .failure:
-                //TODO Handle sad path for invalid image
-                print("Network failure!!!")
-                
-            case .finished: break
-            }
-        }, receiveValue: { [weak self] imageData in
-            if let image = self?.imageTransformer(imageData) {
-                self?.onImageLoad?(image)
-            } else {
-                //TODO Handle sad path for invalid image
-            }
-        })
+        cancellable = imageLoader?(imageURL)
+            .dispatchOnMainQueue()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure:
+                    //TODO Handle sad path for invalid image
+                    print("Network failure!!!")
+                    
+                case .finished: break
+                }
+            }, receiveValue: { [weak self] imageData in
+                if let image = self?.imageTransformer(imageData) {
+                    self?.onImageLoad?(image)
+                } else {
+                    //TODO Handle sad path for invalid image
+                }
+            })
     }
 }

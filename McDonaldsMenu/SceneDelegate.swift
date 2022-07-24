@@ -18,12 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }()
     
-    private lazy var scheduler: AnyDispatchQueueScheduler = DispatchQueue(
-        label: "com.mcdonals.mario.infra.queue",
-        qos: .userInitiated,
-        attributes: .concurrent
-    ).eraseToAnyScheduler()
-    
     private lazy var store = InMemoryProductItemStore()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -60,15 +54,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         return localImageLoader
             .loadImageDataPublisher(from: url)
-            .fallback(to: { [httpClient, scheduler] in
+            .fallback(to: { [httpClient] in
                 httpClient
                     .getPublisher(url: url)
                     .tryMap(ImageDataMapper.map)
                     .caching(to: localImageLoader, using: url)
-                    .subscribe(on: scheduler)
-                    .eraseToAnyPublisher()
             })
-            .subscribe(on: scheduler)
+            .subscribe(on: DispatchQueue.global())
             .eraseToAnyPublisher()
     }
 }
