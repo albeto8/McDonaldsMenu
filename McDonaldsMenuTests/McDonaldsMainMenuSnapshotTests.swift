@@ -25,7 +25,7 @@ class McDonaldsMainMenuSnapshotTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         
-        record(sut, device: .iPhoneX)
+        assert(sut, device: .iPhoneX)
     }
     
     private func makeMenuCategory(title: String) -> MenuCategory {
