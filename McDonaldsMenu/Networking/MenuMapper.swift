@@ -24,7 +24,7 @@ final class MenuMapper {
             
             var toModel: Product {
               Product(name: name, 
-                      imageName: url, 
+                      imagePath: url, 
                       productDescription: description, 
                       price: price)
             }

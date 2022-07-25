@@ -92,7 +92,7 @@ final class DetailViewController: UIViewController {
     }
     
     private func configure(with product: Product) {
-        productImageView.image = UIImage(named: product.imageName)
+        productImageView.image = UIImage(named: product.imagePath)
         productNameLabel.text = product.name
         priceLabel.text = "$\(product.price)"
         descriptionLabel.text = product.productDescription

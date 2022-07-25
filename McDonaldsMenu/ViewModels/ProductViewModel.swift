@@ -33,7 +33,7 @@ final class ProductViewModel<Image> {
     }
     
     func loadImageData() {
-        guard let imageURL = URL(string: model.imageName) else {
+        guard let imageURL = URL(string: model.imagePath) else {
             //TODO Handle sad path for invalid URL
             return
         }
