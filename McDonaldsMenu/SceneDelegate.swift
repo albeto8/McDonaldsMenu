@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private var navigationController = UINavigationController()
     
+    //Store for caching images in memory
     private lazy var store = InMemoryProductItemStore()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
