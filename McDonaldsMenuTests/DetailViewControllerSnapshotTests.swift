@@ -16,6 +16,6 @@ final class DetailViewControllerSnapshotTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         
-        record(sut, device: .iPhoneX)
+        assert(sut, device: .iPhoneX)
     }
 }

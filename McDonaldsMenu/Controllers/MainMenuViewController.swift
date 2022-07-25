@@ -19,14 +19,14 @@ final class MainMenuViewController: UIViewController {
     
     private let menuCategoriesViewModel: MenuCategoriesViewModel?
     private let imageLoader: ((URL) -> ImageDataLoader.Publisher)?
-    private let selection: (Product) -> Void
+    private let selection: ((Product) -> Void)?
     
     var menuCategories = [MenuCategory]()
     var productCarouselCellController = [ProductCarouselCellController]()
     
     init(menuCategoriesViewModel: MenuCategoriesViewModel? = nil, 
-         imageLoader: ((URL) -> ImageDataLoader.Publisher)?, 
-         selection: @escaping (Product) -> Void) {
+         imageLoader: ((URL) -> ImageDataLoader.Publisher)? = nil, 
+         selection: ((Product) -> Void)? = nil) {
         self.menuCategoriesViewModel = menuCategoriesViewModel
         self.imageLoader = imageLoader
         self.selection = selection
