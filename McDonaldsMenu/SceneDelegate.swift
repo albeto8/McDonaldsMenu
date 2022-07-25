@@ -62,9 +62,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .eraseToAnyPublisher()
     }
     
-    private func showDetail(for productViewModel: ProductViewModel<UIImage>) {
-        let detailController = DetailViewController(productViewModel: productViewModel)
-        detailController.modalPresentationStyle = .pageSheet
+    private func showDetail(for viewModel: ProductViewModel<UIImage>) {
+        let detailController = DetailViewComposer.build(for: viewModel)
         navigationController.present(detailController, animated: true)
     }
 }
