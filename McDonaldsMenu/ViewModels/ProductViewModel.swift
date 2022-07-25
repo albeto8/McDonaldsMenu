@@ -32,6 +32,14 @@ final class ProductViewModel<Image> {
         model.name
     }
     
+    var price: String {
+        "$\(model.price)"
+    }
+    
+    var productDescription: String {
+        model.productDescription
+    }
+    
     func loadImageData() {
         guard let imageURL = URL(string: model.imagePath) else {
             //TODO Handle sad path for invalid URL
