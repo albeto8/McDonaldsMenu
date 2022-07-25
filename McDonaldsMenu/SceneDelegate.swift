@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }()
     
+    private var navigationController = UINavigationController()
+    
     private lazy var store = InMemoryProductItemStore()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -25,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let navigationController = UINavigationController(rootViewController: makeMainViewController())
+        navigationController = UINavigationController(rootViewController: makeMainViewController())
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
@@ -69,6 +71,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             })
             .subscribe(on: DispatchQueue.global())
             .eraseToAnyPublisher()
+    }
+    
+    private func showDetail(for product: Product) {
+        let detailController = DetailViewController(product: product)
+        navigationController.pushViewController(detailController, animated: true)
     }
 }
 
