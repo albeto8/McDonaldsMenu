@@ -67,6 +67,17 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewConstraints()
+        configure(with: productViewModel)
+        productViewModel.loadImageData()
+        
+        productViewModel.onImageLoad = { [weak self] image in
+            guard let self = self else { return }
+            self.productImageView.image = image
+        }
+    }
+    
+    private func configureViewConstraints() {
         view.backgroundColor = .white
         
         view.addSubview(productImageView)
@@ -87,8 +98,6 @@ final class DetailViewController: UIViewController {
         priceLabel.center(inView: priceContainerView)
         
         descriptionLabel.anchor(top: priceContainerView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, paddingTop: 21, paddingLeading: 30, paddingTrailing: 30)
-        
-        configure(with: productViewModel)
     }
     
     private func configure(with productViewModel: ProductViewModel<UIImage>) {
