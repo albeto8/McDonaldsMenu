@@ -33,7 +33,7 @@ final class ProductViewModel<Image> {
     }
     
     var price: String {
-        "$\(model.price)"
+        "$\(model.price.clean)"
     }
     
     var productDescription: String {
@@ -65,5 +65,11 @@ final class ProductViewModel<Image> {
                     //TODO Handle sad path for invalid image
                 }
             })
+    }
+}
+
+extension Double {
+    var clean: String {
+       return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
     }
 }
