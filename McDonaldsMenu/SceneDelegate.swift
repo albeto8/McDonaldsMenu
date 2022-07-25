@@ -34,19 +34,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeMainViewController() -> MainMenuViewController {
-        let menuCategoriesViewModel = MenuCategoriesViewModel(loader: makeMenuLoader)
-        let viewController = MainMenuViewController(menuCategoriesViewModel: menuCategoriesViewModel, imageLoader: makeImageLoader(url:), selection: showDetail(for:))
-        
-        menuCategoriesViewModel.onFetch = { menuCategories in
-            viewController.display(menuCategories)
-        }
-        
-        let logoImageView = UIImageView()
-        logoImageView.image = UIImage(named: "logo")
-        logoImageView.contentMode = .scaleAspectFit
-        viewController.navigationItem.titleView = logoImageView
-        
-        return viewController
+        return MainMenuComposer.build(loader: makeMenuLoader, 
+                                      imageLoader: makeImageLoader(url:), 
+                                      selection: showDetail(for:))
     }
     
     private func makeMenuLoader() -> AnyPublisher<[MenuCategory], Error> {
