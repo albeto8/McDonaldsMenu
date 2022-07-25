@@ -74,7 +74,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func showDetail(for product: Product) {
         let detailController = DetailViewController(product: product)
-        navigationController.pushViewController(detailController, animated: true)
+        detailController.modalPresentationStyle = .pageSheet
+        navigationController.present(detailController, animated: true)
     }
 }
 
