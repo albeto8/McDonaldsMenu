@@ -9,7 +9,7 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
-    private let productViewModel: ProductViewModel<UIImage>
+    private let productViewModel: ProductViewModel<UIImage>?
     
     private lazy var productImageView: UIImageView = {
         let imageView = UIImageView()
@@ -56,7 +56,7 @@ final class DetailViewController: UIViewController {
         return label
     }()
     
-    init(productViewModel: ProductViewModel<UIImage>) {
+    init(productViewModel: ProductViewModel<UIImage>? = nil) {
         self.productViewModel = productViewModel
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
@@ -69,9 +69,9 @@ final class DetailViewController: UIViewController {
         super.viewDidLoad()
         configureViewConstraints()
         configure(with: productViewModel)
-        productViewModel.loadImageData()
+        productViewModel?.loadImageData()
         
-        productViewModel.onImageLoad = { [weak self] image in
+        productViewModel?.onImageLoad = { [weak self] image in
             guard let self = self else { return }
             self.productImageView.image = image
         }
@@ -100,9 +100,9 @@ final class DetailViewController: UIViewController {
         descriptionLabel.anchor(top: priceContainerView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, paddingTop: 21, paddingLeading: 30, paddingTrailing: 30)
     }
     
-    private func configure(with productViewModel: ProductViewModel<UIImage>) {
-        productNameLabel.text = productViewModel.name
-        priceLabel.text = productViewModel.price
-        descriptionLabel.text = productViewModel.productDescription
+    private func configure(with productViewModel: ProductViewModel<UIImage>?) {
+        productNameLabel.text = productViewModel?.name
+        priceLabel.text = productViewModel?.price
+        descriptionLabel.text = productViewModel?.productDescription
     }
 }

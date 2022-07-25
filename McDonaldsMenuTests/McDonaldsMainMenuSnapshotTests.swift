@@ -29,9 +29,10 @@ class McDonaldsMainMenuSnapshotTests: XCTestCase {
     }
     
     private func makeMenuCategory(title: String) -> MenuCategory {
-        let product = Product(name: "6 Piece Chicken McNuggets® Happy Meal", imageName: "cocaCola", productDescription: makeProductDescription(), price: 10)
-        let product2 = Product(name: "Sprite", imageName: "cocaCola", productDescription: makeProductDescription(), price: 10)
-        let product3 = Product(name: "Fanta", imageName: "cocaCola", productDescription: makeProductDescription(), price: 10)
+        //TODO: Inject product image for snapshot tests
+        let product = Product(name: "6 Piece Chicken McNuggets® Happy Meal", imagePath: "", productDescription: makeProductDescription(), price: 10)
+        let product2 = Product(name: "Sprite", imagePath: "", productDescription: makeProductDescription(), price: 10)
+        let product3 = Product(name: "Fanta", imagePath: "", productDescription: makeProductDescription(), price: 10)
         return MenuCategory(title: title, products: [product, product2, product3])
     }
     
