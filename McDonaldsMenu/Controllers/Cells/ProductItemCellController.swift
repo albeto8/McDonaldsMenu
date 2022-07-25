@@ -9,15 +9,21 @@ import UIKit
 
 final class ProductItemCellController {
     private let viewModel: ProductViewModel<UIImage>
+    private let selection: () -> Void
     
-    init(viewModel: ProductViewModel<UIImage>) {
+    init(viewModel: ProductViewModel<UIImage>, selection: @escaping () -> Void) {
         self.viewModel = viewModel
+        self.selection = selection
     }
     
     func view(in collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
         let cell = binded(collectionView.dequeueReusableCell(for: indexPath))
         viewModel.loadImageData()
         return cell
+    }
+    
+    func didTap() {
+        selection()
     }
     
     private func binded(_ cell: ProductCollectionViewCell) -> ProductCollectionViewCell {

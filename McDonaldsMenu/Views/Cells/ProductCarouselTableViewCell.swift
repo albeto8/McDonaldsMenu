@@ -52,6 +52,10 @@ extension ProductCarouselTableViewCell: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         productItemCellControllers.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        productItemCellControllers[indexPath.row].didTap()
+    }
 }
 
 extension ProductCarouselTableViewCell: UICollectionViewDelegateFlowLayout {

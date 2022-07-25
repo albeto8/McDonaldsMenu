@@ -19,14 +19,17 @@ final class MainMenuViewController: UIViewController {
     
     private let menuCategoriesViewModel: MenuCategoriesViewModel?
     private let imageLoader: ((URL) -> ImageDataLoader.Publisher)?
+    private let selection: (Product) -> Void
     
     var menuCategories = [MenuCategory]()
     var productCarouselCellController = [ProductCarouselCellController]()
     
     init(menuCategoriesViewModel: MenuCategoriesViewModel? = nil, 
-         imageLoader: ((URL) -> ImageDataLoader.Publisher)?) {
+         imageLoader: ((URL) -> ImageDataLoader.Publisher)?, 
+         selection: @escaping (Product) -> Void) {
         self.menuCategoriesViewModel = menuCategoriesViewModel
         self.imageLoader = imageLoader
+        self.selection = selection
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -51,7 +54,8 @@ final class MainMenuViewController: UIViewController {
     
     func display(_ menuCategories: [MenuCategory]) {
         self.menuCategories = menuCategories
-        self.productCarouselCellController = menuCategories.map({ ProductCarouselCellController(model: $0.products, imageLoader: imageLoader)})
+        self.productCarouselCellController = menuCategories.map({ ProductCarouselCellController(model: $0.products, 
+                                                                                                imageLoader: imageLoader, selection: selection)})
         self.tableView.reloadData()
     }
 }
